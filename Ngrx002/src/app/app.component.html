@@ -1,0 +1,20 @@
+
+{{message$|async}}
+
+<button (click)="torontoMessage()">Toronto</button>
+<button (click)="ottawaMessage()">Ottawa</button>
+
+<!--000000002-->
+<hr />
+<h3>Hi welcome 02</h3>
+<div *ngIf="post | async as p">
+    <h2>{{p.text}}</h2>
+    <h4>Votes: {{p.likes}}</h4>
+
+    <button (click)="upvote()">Up Vote</button>
+    <button (click)="downvote()">Down Vote</button>
+    <button (click)="resetpost()">Reset Post</button>
+
+    <input [(ngModel)]="text">
+    <button (click)="edittext()">Edit Text</button>
+</div>
